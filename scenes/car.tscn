@@ -19,3 +19,19 @@ texture = ExtResource("1_c35m8")
 shape = SubResource("RectangleShape2D_qt2eu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Raycasts" type="Node2D" parent="."]
+
+[node name="Forward" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(50, 0)
+
+[node name="Left5" type="RayCast2D" parent="Raycasts"]
+rotation = 0.0872665
+target_position = Vector2(50, 0)
+
+[node name="Right5" type="RayCast2D" parent="Raycasts"]
+rotation = -0.0872665
+target_position = Vector2(50, 0)
+
+[node name="Sweep" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(50, 0)
