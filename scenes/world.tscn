@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ahdi3wnkv1h"]
+
+[ext_resource type="Texture2D" uid="uid://olc5che2g8fe" path="res://assets/Gordon Road Intersection.png" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://cs8lyt26rqd16" path="res://scenes/car.tscn" id="2_rwgxs"]
+
+[node name="World" type="Node2D"]
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Map"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D2"]
+polygon = PackedVector2Array(-525, 702, -433, 704, -348, 700, -178, 679, 112, 618, 307, 545, 373, 532, 430, 551, 597, 722, 826, 1002, 977, 1191)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/StaticBody2D"]
+polygon = PackedVector2Array(-488, 367, -496, 443, -362, 450, -249, 449, -140, 441, -52, 430, 39, 413, 130, 389, 209, 364, 239, 353, 271, 339, 290, 325, 302, 306, 308, 283, 307, 260, 294, 216, 263, 142, 147, -101, 115, -160, 69, -228, -2, -303, -24, -330, -73, -419, -254, -818, -328, -1000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Map"]
+position = Vector2(1689, 126)
+texture = ExtResource("1_nnsk1")
+
+[node name="Car" parent="." instance=ExtResource("2_rwgxs")]
+position = Vector2(633, 505)
+rotation = -2.185994
